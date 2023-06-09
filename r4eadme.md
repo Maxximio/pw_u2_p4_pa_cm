@@ -1,12 +1,13 @@
 # Unidad 2
 
-## taller12
+## Taller 13
 
 - preincipales frameworks de javaScript
 
 - react.js: lleva la delantera por ser un framework más antiguo.
 - vue.js: framework progresivo, tiene el potencial de convertirse en el framework más utilizado en 3 años aprox.
 - angular: es uno de los frameworks de JS más potentes y la mejor opción cuando se pretende originar sitios web de una sola página con elementos interactivos.
+
 
 - ventajas de utilizar vue.js
 - fácil de iniciar
@@ -17,10 +18,45 @@
 
 - puede ir migrando, construyendo por partes los componentes de una página.
 
-//<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
-- vue funciona con options apa (estructura de la página web)
+``` html
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+```
+
+- vue funciona con options API (estructura de la página web)
 - una de esas opciones es el template
 
 - se debe declarar desde el body y no en forma de metadatos.
+
+Si yo quiero ejecutar JS debo ejecutarlo con `{{}}`
+
+La buena practica es incrustar el codigo HTML en dentro de las paginas, en vez de los componentes de Vue
+
+DATA API SON PROPIEDADES QUE ME PERMITEN CREAR PROPIEDADES REACTIVAS, me permiten vincular info de la vista, con mi programacion js
+
+MVC Model View Controller, vista va a enviar peticiones a un componente llamado controlador que controla requests, todo lo mandado es el modelo, 
+
+![MVC](/img/mvc.PNG)
+
+
+
+Palabras reservadas del Options API de Vue.js
+
+- `data()`
+- `methods:{}`
+
+Directivas
+- v-on: para gestionar eventos(si voy a utilizar la palabra reservada dentro de js, tengo que usar la palabra reservada `this` )
+
+reactiva porque detecta que hubo un cambio en la propiedad reactiva, y vue envia info al navegador
+
+### SPA (Single Page Application)
+voy a manejar una unica pagina, xq ya se trajeron
+- la primera iteracion es mas lenta, xq trata de cargar todo al inicio, para facilitar futuros request
+
+Demora menos en la carga tradicional vs Demora mas en la carga spa
+
+Demora un poco en cada carga vs Demora menos en despues de la carga inicial
+
+La experiencia de usuario mejora en la navegacion SPA, inclusive la carga inicial es practicamente imperceptible
 
