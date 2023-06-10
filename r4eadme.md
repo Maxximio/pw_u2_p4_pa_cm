@@ -58,5 +58,20 @@ Demora menos en la carga tradicional vs Demora mas en la carga spa
 
 Demora un poco en cada carga vs Demora menos en despues de la carga inicial
 
-La experiencia de usuario mejora en la navegacion SPA, inclusive la carga inicial es practicamente imperceptible
+La experiencia de usuario mejora en la navegacion SPA, inclusive la carga inicial es practicamente imperceptible.
 
+- cuando ejecutamos un evento, involucra codigo js
+
+## v-for
+
+- for: es una sentencia que permite iterar sobre una lista.
+
+- transladado dentro del framework, nos permite también construir dinámicamente elementos, como 6 botónes rápidamente o una imagen.
+
+v-model: directiva para formularios vincular info de ida o de retorno en `input `
+
+this.miarreglo.unshift(nuevoEstudiante);//principio
+        this.miarreglo.push(nuevoEstudiante);//final
+
+'v-on:keypress.enter='
+modificadores de evento
