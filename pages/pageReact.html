@@ -4,13 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hola Mundo React</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.14.0/umd/react.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.14.0/umd/react-dom.development.js"></script>
+  
 </head>
 <body>
-    <div id="root">
-    </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/17.0.2/umd/react.development.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/17.0.2/umd/react-dom.development.js"></script>
-    <script src="../js/appReact.js"></script> <!-- Archivo JS de React -->
-</body>
+    <div id="root"></div>
+  
+    <script>
+        function HelloWorld() {
+          return React.createElement('h1', null, 'Hola Mundo desde React');
+        }
+    
+        ReactDOM.render(
+          React.createElement(HelloWorld, null),
+          document.getElementById('root')
+        );
+      </script>
+     </body>
 </html>
