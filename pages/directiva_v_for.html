@@ -1,52 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Directiva</title>
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-  </head>
-  <body>
-    <header></header>
-    <nav></nav>
-    <section>
-      <div id="miaplicacion2">
-        <!-- <ul>
-          <li>{{miarreglo[0]}}</li>
-          <li>{{miarreglo[1]}}</li>
-          <li>{{miarreglo[2]}}</li>
-          <li>{{miarreglo[3]}}</li>
-          <li>{{miarreglo[4]}}</li>
-          <li v-for="data()">{{miarreglo}}</li>
-        </ul> -->
 
-        <!-- <ul>
-          <li v-for="({nombre,apellido},index) in miarreglo">
-            <span>nombre: {{nombre}} </span>
-            <blockquote>apellido: {{apellido}}</blockquote>
-          </li>
-        </ul> -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formulario</title>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <link rel="stylesheet" href="../css/estilos.css">
+</head>
 
-        <h4>Estudiantes UCE</h4>
+<body class="cuerpo">
+  <header></header>
+  <nav></nav>
+  <section>
+    <div id="miaplicacion2">
 
-        <input type="text" v-model="nombre" v-on:keypress.enter="agregarEstudaite2" />
+      <h1 class="titulo">Ingresa Estudiantes UCE</h1>
 
-        <h1>{{nombre}}</h1>
+      <form class="formulario" action="">
 
-        <hr />
 
-        <h1>Lista Estudiantes</h1>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Nombre: </label>
+          <input type="text" class="form-control" v-model="nombre" />
+
+        </div>
+
+        <div class="form-group">
+            <label for="">Apellido: </label>
+            <input type="text" class="form-control" v-model="apellido" />
+
+
+        </div>
+
+        <div class="form-group">
+
+            <label for="">Edad: </label>
+            <input type="text"  class="form-control" v-model="edad" />
+
+        </div>
+
+        <div class="form-group">
+
+            <label for="">Telefono: </label>
+            <input type="text" class="form-control" v-model="telefono" />
+
+        </div>
+
+
+      </form>
+
+      <div class="botonI">
+        <button class="btn btn-primary" v-on:click="ingresar()">Ingresar</button>
+      </div>
+      
+      <hr />
+
+      <div >
+        <h2 class="titulo">Lista de Estudiantes</h2>
+
+        
 
         <ul>
           <li v-for="(estudiante,index) in miarreglo">
-            <span>nombre: {{miarreglo[index].nombre}} </span>
-            <blockquote>apellido: {{miarreglo[index].apellido}}</blockquote>
+            <span >Nombre: {{miarreglo[index].nombre}} {{miarreglo[index].apellido}}, Edad:
+              {{miarreglo[index].edad}}</span>
+            <blockquote>Telefono: {{miarreglo[index].telefono}}</blockquote>
           </li>
         </ul>
       </div>
-    </section>
-    <footer></footer>
 
-    <script src="/js/vFor.js"></script>
-  </body>
+    </div>
+
+  </section>
+  <footer></footer>
+
+  <script src="/js/vFor.js"></script>
+</body>
+
 </html>
