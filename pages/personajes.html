@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personajes</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="/css/estilos.css">
+  </head>
+  <body>
+    <div class="container"> 
+    <div class="formEstudiante" >
+      <header></header>
+      <nav></nav>
+      <section>
+        <div id="miaplicacion2">
+         
+  
+          <h4>Juego</h4>
+          <form class="form"  @submit.prevent="addPersonaje">
+            <h2>Nuevo Personaje</h2>
+          
+            <p type="Nombre: ">
+                <input  type="text" v-model="personaje.nombre">
+            </p>
+            <p type="Clase: ">
+                <input  type="text" v-model="personaje.clase">
+            </p>
+            <p type="Vida: ">
+                <input type="number" v-model="personaje.vida">
+            </p>
+            <p type="Exp: ">
+                <input  type="number" v-model="personaje.exp">
+            </p>
+            
+            <button>Ingresar</button>
+          </form>
+  
+  
+          <h1>Lista de Personajes</h1>
+  
+          <ul>
+            <li v-for="({nombre, clase, vida, exp},index) in lista">
+              <h3> Personaje: {{index+1}} , </h3>
+              <span> Nombre: {{nombre}} , </span>
+              <span> Clase: {{clase}}, </span>
+              <span> Vida: {{vida}}, </span>
+              <span> Exp: {{exp}} </span>
+  
+              
+            </li>
+          </ul>
+        </div>
+      </section>
+      <footer></footer>
+    </div>
+  </div>
+    <script src="/js/vFor.js"></script>
+  </body>
+</html>

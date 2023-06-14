@@ -1,80 +1,42 @@
-var a = {
-  nombre: "Paulo",
-  apellido: "Aldaz",
-};
-var b = {
-  nombre: "Carlos",
-  apellido: "Montalvo",
-};
-var c = {
-  nombre: "Andy",
-  apellido: "Sanchez",
-};
-var d = {
-  nombre: "Monica",
-  apellido: "Andrade",
-};
-var e = {
-  nombre: "Pedro",
-  apellido: "Albuja",
-};
-var f = {
-  nombre: "Paul",
-  apellido: "Gonzalez",
-};
-var g = {
-  nombre: "Paulo2",
-  apellido: "Aldaz2",
-};
-var h = {
-  nombre: "Paulo3",
-  apellido: "Aldaz3",
-};
-var i = {
-  nombre: "Paulo4",
-  apellido: "Aldaz4",
-};
-var j = {
-  nombre: "Paulo5",
-  apellido: "Aldaz5",
-};
-
-const arreglo = [a, b, c, d, e, f, g, h, i, j];
-
 const app = Vue.createApp({
   data() {
     return {
-      miarreglo: arreglo,
+      personaje: {
+        nombre: "",
+        clase: "",
+        vida: 0,
+        exp: 0,
+      },
 
-      nombre: '',
+      lista: [
+        //   {
+        //   nombre:"",
+        //   clase:"",
+        //   vida:0,
+        //   exp:0
+        // }
+      ],
     };
   },
   methods: {
-    agregarEstudaite(event) {
-      console.log("vamos a agrgar");
-      console.log(this.nombre);
-      console.log(event.charCode);
-      if (event.charCode == "13") {
-        console.log("presiono Enter");
-        const nuevoEstudiante = {
-          nombre: this.nombre,
-          apellido: "Solo"
-        };
-        this.miarreglo.unshift(nuevoEstudiante);//principio
-        
-      } else {
-        console.log("no presiono Enter");
+    addPersonaje() {
+      // const {nombre,clase,vida,exp} = this.personaje
+      
+      const nuevoPersonaje = {
+        nombre: this.personaje.nombre,
+        clase: this.personaje.clase,
+        vida: this.personaje.vida,
+        exp: this.personaje.exp,
+      };
+
+      this.lista.push(nuevoPersonaje); //final
+      this.personaje = {
+        nombre: "",
+        clase: "",
+        vida: 0,
+        exp: 0,
       }
     },
-
-    agregarEstudaite2() {
-    console.log('Vamos a agregar')
-    const nuevoEstudiante={
-      nombre:this.nombre,
-      apellido: 'Solo'
-    }
-    this.miarreglo.push(nuevoEstudiante)//final
-    }
   },
 });
 
@@ -86,14 +48,4 @@ const app = Vue.createApp({
 //   }
 // }
 
-console.log(arreglo);
-
 app.mount("#miaplicacion2");
-
-// function insertarEstudiante(estudiante){
-
-// }
-
-// function insertarEstudiante({nombre}){
-
-// }
