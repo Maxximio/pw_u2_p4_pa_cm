@@ -58,7 +58,7 @@ const app = Vue.createApp({
         console.log("presiono Enter");
         const nuevoEstudiante = {
           nombre: this.nombre,
-          apellido: "Solo"
+          // apellido: "Solo"
         };
         this.miarreglo.unshift(nuevoEstudiante);//principio
         
@@ -71,9 +71,9 @@ const app = Vue.createApp({
     console.log('Vamos a agregar')
     const nuevoEstudiante={
       nombre:this.nombre,
-      apellido: 'Solo'
+      // apellido: 'Solo'
     }
-    this.miarreglo.push(nuevoEstudiante)//final
+    this.miarreglo.unshift(nuevoEstudiante)//final
     }
   },
 });

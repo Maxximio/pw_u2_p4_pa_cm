@@ -75,3 +75,10 @@ this.miarreglo.unshift(nuevoEstudiante);//principio
 
 'v-on:keypress.enter='
 modificadores de evento
+
+`v-if` construye o no un elemento HTML, dependiendo de un boolean, crea un comentario, actua a nivel de dom, por lo que es recomnendable usarlo de manera puntual
+`v-show` oculta el elemento de estilo, con un `display:none`, es mas útil usarlo cuando se trata de quitar y poner un elemento de manera repetitiva (uso principalmente en juegos).
+
+**visualmente** se comportan igual
+
+en un ejemplo e una página que incorpore v-if, es más útil usarlo si se trata de cargar una página con varios elementos en donde queremos que dicha página sea más ligera ya que los elementos se mostrarán a medida en la que el usuario requiera visualizarlos.

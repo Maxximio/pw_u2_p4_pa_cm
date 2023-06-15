@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../css/externo.css" />
+    
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+
+  <body>
+    <header class="cabeza">
+      <h1>La mejor calculadora del mundo sin anuncios</h1>
+    </header>
+    <nav class="cuadroResultado"></nav>
+    <section class="numeros">
+
+      <div class="container" id="calculadora" >
+       
+        <div class="calculadora" >
+          
+          <label id="idLabelResultado" class="result">{{resultado}}</label>
+          <!-- <h1>{{resultado}}</h1> -->
+          <button v-on:click="agregar(1)">1</button>
+          <button v-on:click="agregar(2)">2</button>
+          <button v-on:click="agregar(3)">3</button>
+
+          <button v-on:click="agregar('+')" class="mas">+</button>
+
+          <button v-on:click="agregar(4)">4</button>
+          <button v-on:click="agregar(5)">5</button>
+          <button v-on:click="agregar(6)">6</button>
+
+          <button v-on:click="agregar('-')">-</button>
+
+          <button v-on:click="agregar(7)">7</button>
+          <button v-on:click="agregar(8)">8</button>
+          <button v-on:click="agregar(9)">9</button>
+
+          <button v-on:click="agregar('÷')">÷</button>
+
+          
+          <button v-on:click="agregar(0)" class="cero">0</button>
+          <button v-on:click="calcular()">=</button>
+          <button v-on:click="agregar('x')">x</button>
+          
+          
+          
+        </div>
+        
+        <div>
+            <button v-on:click="eliminarElemento()">Limpiar</button>
+        </div>
+        
+
+      </div>
+    </section>
+    <footer class="limpieza">
+    </footer>
+  </body>
+  <script src="/js/calculadora.js"></script>
+</html>
