@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Calc</title>
 
     <link rel="stylesheet" href="../css/externo.css" />
     
@@ -13,7 +13,7 @@
 
   <body>
     <header class="cabeza">
-      <h1>La mejor calculadora del mundo sin anuncios</h1>
+      <h1>Calculadora Tarea 07 con Vue</h1>
     </header>
     <nav class="cuadroResultado"></nav>
     <section class="numeros">
@@ -22,7 +22,7 @@
        
         <div class="calculadora" >
           
-          <label id="idLabelResultado" class="result">{{resultado}}</label>
+          <input id="idLabelResultado"  v-model="resultado" class="result"></input>
           <!-- <h1>{{resultado}}</h1> -->
           <button v-on:click="agregar(1)">1</button>
           <button v-on:click="agregar(2)">2</button>

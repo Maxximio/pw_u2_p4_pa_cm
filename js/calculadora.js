@@ -1,14 +1,12 @@
 const app = Vue.createApp({
   data() {
     return {
-     
-
       resultado: "",
     };
   },
   methods: {
     agregar(valor) {
-     this.resultado = this.resultado + valor
+      this.resultado = this.resultado + valor;
     },
 
     calcular() {
@@ -64,11 +62,9 @@ const app = Vue.createApp({
     },
 
     eliminarElemento() {
-      this.resultado = '';
+      this.resultado = "";
     },
   },
 });
-
-
 
 app.mount("#calculadora");
